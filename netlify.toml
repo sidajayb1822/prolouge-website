@@ -1,0 +1,39 @@
+# Clean URLs on Netlify: redirect the .html version to the extensionless path.
+# Netlify already serves e.g. about.html at /about — these rules also strip
+# .html from the address bar if someone lands on the .html URL.
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/prefunding.html"
+  to = "/prefunding"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/education.html"
+  to = "/education"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq.html"
+  to = "/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true

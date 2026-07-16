@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Prologue by Earlyseed Ventures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<!-- Global header (injected by js/layout.js) -->
+<div id="site-header"></div>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h1>Reach out to us!</h1>
+    <div class="contact-grid">
+
+      <!-- Left: form -->
+      <div class="contact-left">
+        <p class="lead">Have questions about our services? Want to get started on your founder journey? Reach out to us and we'll get back to you within 24 hours.</p>
+
+        <form class="contact-form" action="https://formsubmit.co/info@earlyseedventures.com" method="POST">
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_subject" value="New enquiry from Prologue website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+
+          <label for="cf-name">Name</label>
+          <input class="field" type="text" id="cf-name" name="Name" placeholder="Your full name" required>
+
+          <label for="cf-email">Email</label>
+          <input class="field" type="email" id="cf-email" name="Email" placeholder="Your email id" required>
+
+          <label for="cf-subject">Subject</label>
+          <select class="field" id="cf-subject" name="Subject" required>
+            <option value="" disabled selected>Select a subject</option>
+            <option>Pre-funding Services</option>
+            <option>Education &amp; Bootcamps</option>
+            <option>1:1 Mentorship</option>
+            <option>Join the Community</option>
+            <option>General Enquiry</option>
+          </select>
+
+          <label for="cf-message">Message</label>
+          <textarea class="field" id="cf-message" name="Message" placeholder="Tell us how we can help!" required></textarea>
+
+          <button class="send-btn" type="submit">Send message</button>
+        </form>
+      </div>
+
+      <!-- Right: get in touch + map -->
+      <div class="contact-right">
+        <div class="touch-card">
+          <h3>Get in touch</h3>
+          <div class="touch-row">
+            <span class="ic">&#9993;&#65039;</span>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@earlyseedventures.com">info@earlyseedventures.com</a>
+            </div>
+          </div>
+          <div class="touch-row">
+            <span class="ic">&#128205;</span>
+            <div>
+              <h4>Address</h4>
+              <p>3, Enterprise Centre,<br>Near Orchid Hotel,<br>Vile Parle (E) Mumbai, 400099</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe
+            src="https://maps.google.com/maps?q=Enterprise%20Centre%20Near%20Orchid%20Hotel%20Vile%20Parle%20East%20Mumbai%20400099&z=15&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Earlyseed Ventures location"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Global footer (injected by js/layout.js) -->
+<div id="site-footer"></div>
+
+<script src="js/layout.js"></script>
+</body>
+</html>
