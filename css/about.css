@@ -10,9 +10,10 @@
 .about-intro{display:flex;gap:60px;align-items:flex-start;}
 .intro-visual{flex:0 0 300px;display:flex;justify-content:center;padding-top:40px;}
 .diamond{width:180px;height:180px;background:#D9D9D3;transform:rotate(45deg);border-radius:8px;}
-.intro-copy{flex:1;max-width:560px;}
-.intro-copy p{color:#000;font-size:15px;line-height:1.85;margin-bottom:18px;}
-.intro-copy p.bold{font-weight:700;}
+.intro-copy{flex:1;max-width:600px;}
+.intro-copy p{color:#000;font-size:15px;line-height:1.95;margin-bottom:22px;}
+.intro-copy p.bold{font-weight:700;margin-top:4px;}
+.intro-copy p:last-child{margin-bottom:0;}
 
 /* Logo grids (trusted by / affiliations) */
 .logo-grid{
@@ -40,6 +41,7 @@
 .authors-after .author{flex:0 0 200px;aspect-ratio:1/1;}
 
 /* Community / fellow founders */
+.community-title{max-width:760px;}
 .community{display:flex;gap:48px;align-items:center;margin-top:40px;}
 .community-media{
   flex:1;min-height:300px;border-radius:8px;position:relative;overflow:hidden;

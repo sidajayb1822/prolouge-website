@@ -2,7 +2,7 @@
 
 /* Hero */
 .edu-hero{padding:60px 0 24px;}
-.edu-hero h1{font-size:52px;color:var(--blue);line-height:1.12;font-weight:800;max-width:640px;}
+.edu-hero h1{font-size:52px;color:var(--blue);line-height:1.18;font-weight:800;max-width:720px;}
 .edu-hero .btn{margin-top:30px;}
 
 /* Feature cards (2x2) */
@@ -42,7 +42,7 @@
 .cohort-card .photo.stack{aspect-ratio:auto;background:transparent;display:flex;flex-direction:column;gap:8px;}
 .cohort-card .photo.stack img{height:auto;}
 .cohort-card .foot{display:flex;align-items:center;gap:16px;margin-top:20px;}
-.cohort-card .foot img{height:48px;width:auto;object-fit:contain;}
+.cohort-card .foot img{height:70px;width:auto;max-width:120px;object-fit:contain;}
 .cohort-card .foot .name{font-weight:700;font-size:15px;color:var(--ink);}
 .cohorts .c-arrow{
   position:absolute;top:50%;transform:translateY(-50%);

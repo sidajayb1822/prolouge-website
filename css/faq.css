@@ -13,7 +13,7 @@
 .faq-q .plus{font-size:24px;font-weight:400;color:var(--ink);flex-shrink:0;line-height:1;transition:transform .25s ease;}
 .faq-item.open .faq-q .plus{transform:rotate(45deg);}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
-.faq-a .inner{padding:16px 4px 4px;color:#333;font-size:14px;line-height:1.85;max-width:840px;}
+.faq-a .inner{padding:16px 4px 4px;color:#333;font-size:14px;line-height:1.85;}
 .faq-a .inner a{color:var(--blue);font-weight:600;}
 .faq-item.open .faq-a{max-height:800px;}
 

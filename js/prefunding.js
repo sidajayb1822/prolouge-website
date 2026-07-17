@@ -15,13 +15,13 @@
 
   // Case-work slider
   const slides = [
-    "Assets/pre funding/case work/Mool.png",
-    "Assets/pre funding/case work/revior.png",
-    "Assets/pre funding/case work/superhuman.png",
-    "Assets/pre funding/case work/INNOEVERSITY.png",
-    "Assets/pre funding/case work/TFG.png",
-    "Assets/pre funding/case work/the growing girrafe.png",
-    "Assets/pre funding/case work/the skin studio.png"
+    "Assets/pre funding/Case work/Mool.png",
+    "Assets/pre funding/Case work/revior.png",
+    "Assets/pre funding/Case work/superhuman.png",
+    "Assets/pre funding/Case work/INNOEVERSITY.png",
+    "Assets/pre funding/Case work/TFG.png",
+    "Assets/pre funding/Case work/the growing girrafe.png",
+    "Assets/pre funding/Case work/the skin studio.png"
   ];
   const img = document.getElementById('cwImage');
   const btn = document.getElementById('cwNext');

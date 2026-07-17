@@ -9,7 +9,7 @@
 }
 
 /* Left — form */
-.contact-left .lead{color:#000;font-size:15px;line-height:1.7;max-width:390px;margin-bottom:26px;}
+.contact-left .lead{color:#000;font-size:15px;line-height:1.7;margin-bottom:26px;}
 .contact-form label{display:block;font-weight:700;font-size:15px;color:var(--ink);margin:18px 0 8px;}
 .contact-form .field{
   width:100%;padding:14px 18px;border:1.5px solid #cdd6f5;border-radius:26px;

@@ -15,12 +15,8 @@
   <header id="siteHeader">
     <div class="nav">
       <div class="logo-block">
-        <a href="index.html" style="display:flex;flex-direction:column;align-items:flex-start;">
-          <img src="Assets/Logo/Prologue_Logo1 (1).png" alt="Prologue" class="header-logo">
-          <div class="logo-sub">
-            <span class="by">by</span>
-            <span class="brand"><span class="top">earlyseed</span><span class="bottom">VENTURES</span></span>
-          </div>
+        <a href="index.html">
+          <img src="Assets/genral/Prologue by ESV logo.png" alt="Prologue by Earlyseed Ventures" class="header-logo">
         </a>
       </div>
       <nav class="links">
