@@ -13,18 +13,16 @@
     'sakshay@earlyseedventures.com'
   ];
 
-  function payload() {
-    const obj = {};
-    new FormData(form).forEach(function (v, k) { obj[k] = v; });
-    return JSON.stringify(obj);
-  }
-
+  // Use FormData (a CORS "simple" request) to avoid a preflight that
+  // FormSubmit does not handle, then check the real success flag.
   function send(email) {
     return fetch('https://formsubmit.co/ajax/' + encodeURIComponent(email), {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: payload()
-    }).then(function (r) { return r.ok; });
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) { return String(data && data.success) === 'true'; });
   }
 
   function show(kind, msg) {
