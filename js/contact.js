@@ -1,5 +1,6 @@
 /* Contact form: submit via FormSubmit AJAX so the visitor stays on the page
-   and sees an inline confirmation instead of being redirected. */
+   and sees an inline confirmation. Sends a separate direct email to each
+   recipient (no CC). Works only on the deployed site, not file://. */
 
 (function () {
   const form = document.querySelector('.contact-form');
@@ -7,18 +8,31 @@
   const status = document.getElementById('formStatus');
   const btn = form.querySelector('.send-btn');
 
-  // Each recipient gets their own direct email (separate submissions, no CC).
+  // Each recipient gets their own direct email.
   const recipients = [
     'info@earlyseedventures.com',
     'sakshay@earlyseedventures.com'
   ];
 
+  function payload() {
+    const obj = {};
+    new FormData(form).forEach(function (v, k) { obj[k] = v; });
+    return JSON.stringify(obj);
+  }
+
   function send(email) {
     return fetch('https://formsubmit.co/ajax/' + encodeURIComponent(email), {
       method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    }).then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); });
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: payload()
+    }).then(function (r) { return r.ok; });
+  }
+
+  function show(kind, msg) {
+    if (!status) return;
+    status.className = 'form-status ' + kind;
+    status.textContent = msg;
+    status.style.display = 'block';
   }
 
   form.addEventListener('submit', function (e) {
@@ -28,20 +42,14 @@
     btn.textContent = 'Sending…';
     if (status) status.style.display = 'none';
 
-    Promise.all(recipients.map(send))
-      .then(function () {
-        form.reset();
-        if (status) {
-          status.className = 'form-status ok';
-          status.textContent = "Message sent! We'll get back to you within 24 hours.";
-          status.style.display = 'block';
-        }
-      })
-      .catch(function () {
-        if (status) {
-          status.className = 'form-status err';
-          status.textContent = 'Something went wrong. Please email us directly at info@earlyseedventures.com.';
-          status.style.display = 'block';
+    Promise.allSettled(recipients.map(send))
+      .then(function (results) {
+        const anyOk = results.some(function (r) { return r.status === 'fulfilled' && r.value; });
+        if (anyOk) {
+          form.reset();
+          show('ok', "Message sent! We'll get back to you within 24 hours.");
+        } else {
+          show('err', 'Sorry, the message could not be sent right now. Please email us directly at info@earlyseedventures.com.');
         }
       })
       .finally(function () { btn.disabled = false; btn.textContent = label; });
