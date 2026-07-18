@@ -8,8 +8,8 @@
 
 /* Intro two-column */
 .about-intro{display:flex;gap:60px;align-items:flex-start;}
-.intro-visual{flex:0 0 300px;display:flex;justify-content:center;padding-top:40px;}
-.diamond{width:180px;height:180px;background:#D9D9D3;transform:rotate(45deg);border-radius:8px;}
+.intro-visual{flex:0 0 320px;display:flex;justify-content:center;padding-top:10px;}
+.intro-img{width:100%;height:auto;border-radius:12px;}
 .intro-copy{flex:1;max-width:600px;}
 .intro-copy p{color:#000;font-size:15px;line-height:1.95;margin-bottom:22px;}
 .intro-copy p.bold{font-weight:700;margin-top:4px;}
