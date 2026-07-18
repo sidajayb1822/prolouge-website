@@ -10,7 +10,6 @@
 
   // Each recipient gets their own direct email.
   const recipients = [
-    'info@earlyseedventures.com',
     'sakshay@earlyseedventures.com'
   ];
 
