@@ -57,5 +57,14 @@
 @media(max-width:900px){
   .edu-hero h1{font-size:38px;}
   .edu-cards, .expect-grid{grid-template-columns:1fr;}
+  .expect-grid{gap:26px;}
+  .cohorts{padding:0 26px;}
   .cohort-card{flex:0 0 100%;}
+  .cohorts .c-arrow{width:44px;height:44px;font-size:20px;}
+  .cohorts .c-arrow.prev{left:-6px;}
+  .cohorts .c-arrow.next{right:-6px;}
+}
+@media(max-width:600px){
+  .edu-hero h1{font-size:30px;}
+  .expect img{width:60px;height:60px;}
 }

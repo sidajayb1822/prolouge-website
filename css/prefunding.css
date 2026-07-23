@@ -61,7 +61,17 @@
 .casework .cw-arrow:hover{background:#2E9CA6;}
 
 @media(max-width:900px){
+  .pf-hero{padding:44px 0 16px;}
   .pf-hero h1{font-size:38px;}
+  .pf-hero .hero-btns .btn{flex:1 1 100%;text-align:center;}
   .price-grid, .addon-grid, .pillar-grid{grid-template-columns:1fr;}
+  .price-card, .pillar{min-height:0;}
   .price-card .desc{min-height:0;}
+  .pillar{min-height:0;}
+  .casework{gap:14px;}
+  .casework .cw-arrow{width:52px;height:52px;font-size:22px;}
+}
+@media(max-width:600px){
+  .pf-hero h1{font-size:30px;}
+  .ps-head{font-size:26px;}
 }

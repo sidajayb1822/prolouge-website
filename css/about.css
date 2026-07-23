@@ -67,8 +67,15 @@
 @media(max-width:900px){
   .about-hero h1{font-size:40px;}
   .about-intro{flex-direction:column;gap:28px;}
-  .intro-visual{padding-top:0;}
-  .logo-grid, .logo-grid.affiliations{grid-template-columns:repeat(2,1fr);}
+  .intro-visual{padding-top:0;flex:0 0 auto;}
+  .intro-img{max-width:320px;}
+  .logo-grid, .logo-grid.affiliations{grid-template-columns:repeat(3,1fr);}
   .authors-grid{grid-template-columns:repeat(2,1fr);}
-  .community{flex-direction:column;}
+  .community{flex-direction:column;align-items:stretch;}
+  .community-info{max-width:none;}
+}
+@media(max-width:600px){
+  .about-hero h1{font-size:32px;}
+  .logo-grid, .logo-grid.affiliations{grid-template-columns:repeat(2,1fr);gap:16px;}
+  .logo-grid .logo{height:84px;padding:12px;}
 }

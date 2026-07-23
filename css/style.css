@@ -96,6 +96,12 @@ nav.links a:nth-child(2){z-index:4;}
 nav.links a:nth-child(3){z-index:3;}
 nav.links a:nth-child(4){z-index:2;}
 nav.links a:nth-child(5){z-index:1;}
+/* Hamburger (mobile only) */
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px 6px;}
+.nav-toggle span{display:block;width:26px;height:3px;border-radius:2px;background:var(--ink);transition:transform .25s ease, opacity .2s ease;}
+header.nav-open .nav-toggle span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+header.nav-open .nav-toggle span:nth-child(2){opacity:0;}
+header.nav-open .nav-toggle span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
 
 /* Hero */
 .hero{
@@ -283,12 +289,86 @@ footer{background:var(--gold);color:#fff;padding:56px 0;}
 .foot-bottom .meta{font-size:12px;color:rgba(255,255,255,.7);margin-bottom:10px;}
 .foot-bottom .legal{display:flex;justify-content:center;gap:24px;font-size:12px;color:rgba(255,255,255,.85);}
 
+/* ===================== Responsive ===================== */
 @media(max-width:900px){
-  .hero{flex-direction:column;gap:24px;}
-  .hero h1{font-size:38px;}
+  /* Header → hamburger menu */
+  #site-header{min-height:92px;}
+  header{min-height:92px;}
+  .nav{padding:16px 20px;align-items:center;}
+  .header-logo{height:62px;}
+  .nav-toggle{display:flex;}
+  nav.links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;filter:none;
+    background:rgba(252,252,251,.98);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    box-shadow:0 14px 30px rgba(0,0,0,.12);padding:6px 20px 14px;
+  }
+  header.nav-open nav.links{display:flex;}
+  nav.links a{
+    background:transparent;color:var(--ink);border:none;border-radius:0;
+    border-bottom:1px solid var(--line);margin:0;padding:16px 4px;
+    font-size:17px;text-align:left;box-shadow:none;
+  }
+  nav.links a:not(:first-child){margin-left:0;padding-left:4px;}
+  nav.links a:last-child{border-bottom:none;}
+  nav.links a:hover{background:rgba(0,0,0,.03);}
+
+  /* Layout & type */
+  .wrap{padding:0 22px;}
+  section{padding:48px 0;}
+  .hero{flex-direction:column;gap:20px;padding:48px 22px 40px;}
+  .hero h1{font-size:44px;}
+  .hero h1 .hero-rocket{height:56px;vertical-align:-12px;margin-left:6px;}
+  .hero p.sub{font-size:19px;}
+  .section-title{font-size:36px;}
+  .split{gap:24px;}
+
+  /* Offerings */
+  .tabs{gap:5px;}
+  .tabs button{font-size:12px;padding:14px 6px;}
+  .offer-panel{padding:18px;}
+  .offer-media{min-height:220px;}
+  .offer-media p{font-size:20px;padding:0 24px;}
   .offer-cards{grid-template-columns:1fr;}
+  .mentors-grid{grid-template-columns:repeat(2,1fr);}
+
+  /* Scale grid */
   .scale-grid{grid-template-columns:repeat(2,1fr);}
-  .foot-grid{grid-template-columns:1fr;text-align:center;}
+  .scale-grid .cell{padding:170px 22px 32px;min-height:0;}
+  .scale-grid .cell .dash{width:110px;}
+  .scale-grid .cell:nth-child(1) .dash{top:140px;}
+  .scale-grid .cell:nth-child(2) .dash{top:122px;}
+  .scale-grid .cell:nth-child(3) .dash{top:104px;}
+  .scale-grid .cell:nth-child(4) .dash{top:86px;}
+
+  /* Testimonials */
+  .testi{flex-wrap:wrap;justify-content:center;gap:20px;padding:30px 24px;}
+  .testi .avatar{flex:1 1 100%;order:1;height:220px;}
+  .testi .content{flex:1 1 100%;order:2;max-width:none;}
+  .testi .nav-arrow{order:3;width:56px;height:56px;font-size:28px;}
+  .testi .nav-arrow.prev{order:3;}
+
+  /* CTA */
+  .cta{flex-direction:column;align-items:flex-start;gap:18px;}
+  .cta h2{font-size:36px;}
+
+  /* Footer */
+  .foot-grid{grid-template-columns:1fr;text-align:center;gap:28px;}
   .foot-grid h5{border-bottom:none;}
-  nav.links{display:none;}
+  .foot-bottom{padding:56px 0 36px;}
+}
+
+@media(max-width:600px){
+  .wrap{padding:0 18px;}
+  .header-logo{height:54px;}
+  .hero h1{font-size:34px;}
+  .hero p.sub{font-size:17px;}
+  .section-title{font-size:28px;}
+  .cta h2{font-size:28px;}
+  .scale-grid{grid-template-columns:1fr;}
+  .scale-grid .cell{padding:34px 24px;min-height:0;}
+  .scale-grid .cell .dash{display:none;}
+  .offer-cards .card{min-height:0;}
+  .btn{padding:13px 26px;font-size:14px;}
 }

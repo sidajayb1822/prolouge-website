@@ -19,7 +19,10 @@
           <img src="Assets/genral/Prologue by ESV logo.png" alt="Prologue by Earlyseed Ventures" class="header-logo">
         </a>
       </div>
-      <nav class="links">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="links" id="navLinks">
         <a href="about.html">About</a>
         <a href="prefunding.html">Pre-funding</a>
         <a href="education.html">Education</a>
@@ -73,9 +76,24 @@
     if (headerMount) headerMount.outerHTML = headerHTML;
     if (footerMount) footerMount.outerHTML = footerHTML;
 
-    // Hide header on scroll down, show on scroll up
+    // Mobile hamburger menu
     const siteHeader = document.getElementById('siteHeader');
     if (!siteHeader) return;
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function () {
+        const open = siteHeader.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      // Close the menu when a link is tapped
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.closest('a')) {
+          siteHeader.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
     let lastScrollY = window.scrollY;
     window.addEventListener('scroll', () => {
       const currentY = window.scrollY;
