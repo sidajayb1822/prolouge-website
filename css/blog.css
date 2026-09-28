@@ -15,7 +15,7 @@
 .post-body .lead{font-size:21px;font-weight:600;color:var(--ink);line-height:1.6;}
 
 .post-figure{margin:34px 0;}
-.post-figure img{width:100%;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(27,35,64,.08);}
+.post-figure img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(27,35,64,.08);}
 .post-figure figcaption{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.6;text-align:center;}
 
 /* Placeholder for media still to come. Remove before publishing. */
