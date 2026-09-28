@@ -18,6 +18,10 @@
 .post-figure img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(27,35,64,.08);}
 .post-figure figcaption{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.6;text-align:center;}
 
+/* Vertical (9:16) YouTube embed */
+.post-video .video-frame{position:relative;max-width:360px;margin:0 auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(27,35,64,.08);background:#000;}
+.post-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
 /* Placeholder for media still to come. Remove before publishing. */
 .media-todo{margin:34px 0;border:2px dashed var(--teal);border-radius:14px;padding:34px 24px;text-align:center;color:var(--teal);font-weight:600;font-size:15px;background:rgba(47,166,176,.05);}
 .media-todo span{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:6px;}
