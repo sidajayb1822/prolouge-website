@@ -27,6 +27,7 @@
         <a href="prefunding.html">Pre-funding</a>
         <a href="education.html">Education</a>
         <a href="faq.html">FAQs</a>
+        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -50,6 +51,7 @@
         <a href="prefunding.html">Pre-funding</a>
         <a href="education.html">Education</a>
         <a href="faq.html">FAQs</a>
+        <a href="blog.html">Blog</a>
       </div>
     </div>
   </footer>

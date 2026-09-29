@@ -96,6 +96,7 @@ nav.links a:nth-child(2){z-index:4;}
 nav.links a:nth-child(3){z-index:3;}
 nav.links a:nth-child(4){z-index:2;}
 nav.links a:nth-child(5){z-index:1;}
+nav.links a:nth-child(6){z-index:0;}
 /* Hamburger (mobile only) */
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px 6px;}
 .nav-toggle span{display:block;width:26px;height:3px;border-radius:2px;background:var(--ink);transition:transform .25s ease, opacity .2s ease;}
