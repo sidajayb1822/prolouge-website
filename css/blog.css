@@ -20,7 +20,8 @@
 .post-figure figcaption{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.6;text-align:left;}
 
 /* Vertical (9:16) YouTube embed */
-.post-video .video-frame{position:relative;max-width:360px;margin:0;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(27,35,64,.08);background:#000;}
+.post-video .video-frame{position:relative;max-width:360px;margin:0 auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(27,35,64,.08);background:#000;}
+.post-video figcaption{text-align:center;max-width:420px;margin-left:auto;margin-right:auto;}
 .post-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 
 .author-box{display:flex;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;margin:30px 0 10px;}
