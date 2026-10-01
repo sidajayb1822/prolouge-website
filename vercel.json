@@ -2,6 +2,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/blog/startup-pitch-deck-examples", "destination": "/blog-startup-pitch-deck-examples" }
+    {
+      "source": "/blog/startup-pitch-deck-examples",
+      "destination": "/blog-startup-pitch-deck-examples"
+    },
+    {
+      "source": "/blog/how-to-value-pre-revenue-startup-india",
+      "destination": "/blog-how-to-value-pre-revenue-startup-india"
+    }
   ]
 }

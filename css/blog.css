@@ -58,3 +58,8 @@
   .post-cta{padding:26px 22px;}
   .author-box{flex-direction:column;text-align:center;}
 }
+
+/* Sub-headings and small print inside posts */
+.post-body h3{font-size:21px;color:var(--ink);margin:32px 0 12px;}
+.post-body .post-note{font-size:14px;line-height:1.7;color:var(--muted);background:#fff;border-left:3px solid var(--teal);padding:14px 18px;border-radius:0 10px 10px 0;}
+@media(max-width:600px){.post-body h3{font-size:19px;}}
