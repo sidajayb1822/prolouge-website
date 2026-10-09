@@ -64,3 +64,308 @@
 .post-body h3{font-size:21px;color:var(--ink);margin:32px 0 12px;}
 .post-body .post-note{font-size:14px;line-height:1.7;color:var(--muted);background:#fff;border-left:3px solid var(--teal);padding:14px 18px;border-radius:0 10px 10px 0;}
 @media(max-width:600px){.post-body h3{font-size:19px;}}
+
+/* ==========================================================================
+   Prologue blog: extras for the Technical Series
+   --------------------------------------------------------------------------
+   Append the whole of this file to the website's css/blog.css.
+   It adds only what blog.css does not already style: tables, lists,
+   the TL;DR panel and the Napkin Math Box.
+
+   It reuses the site tokens from css/style.css (--blue, --teal, --mint,
+   --orange, --gold, --ink, --muted, --paper, --line), so nothing new needs
+   defining and the series matches the existing posts.
+
+   Brand guide equivalents, for reference only, if these are ever retuned:
+   blue #3d79f2, cyan #49b9cd, mint #59efc0, amber #f2ba52,
+   orange #f2784b, charcoal #3d3d40, grey #636363, off white #f2f2f2.
+   ========================================================================== */
+
+/* --- Post subtitle ------------------------------------------------------
+   The line under the h1. Set in Caveat, the handwriting face the site
+   already loads, so the title block echoes the napkin sketches below it. */
+
+.post-hero .post-subtitle {
+  margin-top: 8px;
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.1;
+  color: var(--teal);
+}
+
+/* --- Key terms ----------------------------------------------------------
+   A definition list of the terms the post teaches, in the reader's words.
+   It helps a reader skim back to one idea, and it gives search engines and
+   answer engines a clean, self-contained definition to quote. */
+
+.post-body .key-terms {
+  margin: 40px 0;
+  padding: 26px 30px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.post-body .key-terms h2 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.post-body .key-terms .key-terms-sub {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.post-body .key-terms dl {
+  margin: 0;
+}
+
+.post-body .key-terms dt {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--blue);
+  margin-top: 16px;
+}
+
+.post-body .key-terms dt:first-of-type {
+  margin-top: 0;
+}
+
+.post-body .key-terms dd {
+  margin: 4px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1d1d1d;
+}
+
+/* --- [VERIFY] badge ------------------------------------------------------
+   Marks a legal or regulatory claim that MN & Co. have not confirmed yet.
+   Deliberately loud, so nothing unverified reaches the website unnoticed.
+   Every one of these has to be resolved and removed before publishing. */
+
+.post-body .verify {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 7px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  background: rgba(231, 169, 62, .14);
+  color: #8a5d12;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* --- Lists. blog.css styles no list at all, so start from scratch. ------- */
+
+.post-body ul,
+.post-body ol {
+  margin: 0 0 22px;
+  padding-left: 24px;
+  font-size: 17px;
+  line-height: 1.85;
+  color: #1d1d1d;
+}
+
+.post-body li {
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.post-body li::marker {
+  color: var(--teal);
+}
+
+.post-body li > strong {
+  color: var(--ink);
+}
+
+/* --- Tables. ------------------------------------------------------------
+   Every table is wrapped in .table-scroll so a wide table scrolls sideways
+   on a phone instead of breaking the page width. */
+
+.post-body .table-scroll {
+  margin: 28px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.post-body table {
+  width: 100%;
+  min-width: 460px;
+  border-collapse: collapse;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #1d1d1d;
+}
+
+.post-body caption {
+  caption-side: top;
+  text-align: left;
+  padding: 14px 18px 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.post-body thead th {
+  background: rgba(67, 97, 238, .07);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+  padding: 13px 18px;
+  border-bottom: 2px solid rgba(67, 97, 238, .18);
+  white-space: nowrap;
+}
+
+.post-body tbody th {
+  font-weight: 600;
+  text-align: left;
+  color: var(--ink);
+}
+
+.post-body tbody td,
+.post-body tbody th {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.post-body tbody tr:last-child td,
+.post-body tbody tr:last-child th {
+  border-bottom: 0;
+}
+
+/* The totals row at the foot of a cap table. */
+.post-body tbody tr.is-total td,
+.post-body tbody tr.is-total th {
+  background: rgba(47, 166, 176, .07);
+  font-weight: 700;
+  color: var(--ink);
+  border-top: 2px solid rgba(47, 166, 176, .25);
+}
+
+/* --- TL;DR ---------------------------------------------------------------
+   The two or three line summary that opens every post in the series. */
+
+.post-body .post-tldr {
+  margin: 0 0 34px;
+  padding: 24px 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--blue);
+  border-radius: 0 14px 14px 0;
+  box-shadow: 0 10px 30px rgba(27, 35, 64, .05);
+}
+
+.post-body .post-tldr h2 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.post-body .post-tldr p {
+  margin: 0;
+  font-size: 17.5px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+/* --- Napkin Math Box -----------------------------------------------------
+   The formula table, worked through on the running example. Styled as a
+   napkin so it reads as the one thing to screenshot and keep. */
+
+.post-body .napkin-box {
+  margin: 40px 0;
+  padding: 28px;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle, rgba(27, 35, 64, .07) 1px, transparent 1px) 0 0/18px 18px,
+    var(--paper);
+}
+
+.post-body .napkin-box h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  color: var(--ink);
+}
+
+.post-body .napkin-box .napkin-sub {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.post-body .napkin-box .table-scroll {
+  margin: 0;
+  border-color: rgba(27, 35, 64, .15);
+}
+
+.post-body .napkin-box thead th {
+  background: rgba(27, 35, 64, .06);
+  border-bottom-color: rgba(27, 35, 64, .22);
+}
+
+/* --- Small screens ------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .post-hero .post-subtitle {
+    font-size: 26px;
+  }
+
+  .post-body ul,
+  .post-body ol {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+
+  .post-body table {
+    font-size: 14.5px;
+  }
+
+  .post-body thead th,
+  .post-body tbody td,
+  .post-body tbody th {
+    padding: 10px 14px;
+  }
+
+  .post-body .post-tldr {
+    padding: 20px;
+  }
+
+  .post-body .post-tldr p {
+    font-size: 16.5px;
+  }
+
+  .post-body .napkin-box {
+    padding: 20px 16px;
+  }
+
+  .post-body .napkin-box h2 {
+    font-size: 22px;
+  }
+}
+
+/* --- Table footnote ------------------------------------------------------
+   A small caption under a table, for a source line or a sampling note.
+   Sits tight under the table it belongs to, not floating as its own note. */
+
+.post-body .table-note {
+  margin: -16px 0 28px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}

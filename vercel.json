@@ -3,12 +3,16 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/blog/fundraise-fundamentals",
+      "destination": "/blog/sakshay-upadhyay/fundraise-fundamentals"
+    },
+    {
       "source": "/blog/startup-pitch-deck-examples",
-      "destination": "/blog-startup-pitch-deck-examples"
+      "destination": "/blog/monica-gupta/startup-pitch-deck-examples"
     },
     {
       "source": "/blog/how-to-value-pre-revenue-startup-india",
-      "destination": "/blog-how-to-value-pre-revenue-startup-india"
+      "destination": "/blog/monica-gupta/how-to-value-pre-revenue-startup-india"
     }
   ]
 }
