@@ -3,16 +3,19 @@
 
 (function () {
   // Featured slider
+  const AUTOPLAY_MS = 6000;
   const slides = document.querySelectorAll('.feat-slide');
   const dashesWrap = document.getElementById('featDashes');
+  const slider = document.querySelector('.feat-slider');
   if (slides.length) {
     let index = Math.max(0, [...slides].findIndex(s => s.classList.contains('is-active')));
+    let autoplayTimer = null;
 
     slides.forEach((_, i) => {
       const dash = document.createElement('button');
       dash.className = 'feat-dash';
       dash.setAttribute('aria-label', 'Go to post ' + (i + 1));
-      dash.addEventListener('click', () => show(i));
+      dash.addEventListener('click', () => userShow(i));
       dashesWrap.appendChild(dash);
     });
     const dashes = dashesWrap.querySelectorAll('.feat-dash');
@@ -23,9 +26,27 @@
       dashes.forEach((d, j) => d.classList.toggle('is-active', j === index));
     }
 
-    document.getElementById('featPrev').addEventListener('click', () => show(index - 1));
-    document.getElementById('featNext').addEventListener('click', () => show(index + 1));
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(() => show(index + 1), AUTOPLAY_MS);
+    }
+    function stopAutoplay() {
+      if (autoplayTimer) clearInterval(autoplayTimer);
+    }
+    // Manual navigation resets the timer, so the next auto-advance is a full interval away.
+    function userShow(i) {
+      show(i);
+      startAutoplay();
+    }
+
+    document.getElementById('featPrev').addEventListener('click', () => userShow(index - 1));
+    document.getElementById('featNext').addEventListener('click', () => userShow(index + 1));
+    if (slider) {
+      slider.addEventListener('mouseenter', stopAutoplay);
+      slider.addEventListener('mouseleave', startAutoplay);
+    }
     show(index);
+    startAutoplay();
   }
 
   // Search + author filter

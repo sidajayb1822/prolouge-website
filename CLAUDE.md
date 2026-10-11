@@ -18,6 +18,9 @@ Prologue New website/
 ├─ faq.html            # FAQ page
 ├─ contact.html        # Contact page (form via FormSubmit + embedded map)
 ├─ page-template.html  # Starter — COPY THIS to make any new page
+├─ blog.html            # Blog index: featured slider + search + author filter + grid
+├─ blog-<slug>.html     # One file per blog post, flat in the root (see "Blog posts" below)
+├─ vercel.json           # Clean URLs + the /blog/<slug> rewrites (see "Blog posts" below)
 ├─ CLAUDE.md           # This file
 ├─ css/
 │  ├─ style.css        # ALL shared styling (design tokens + components)
@@ -25,18 +28,29 @@ Prologue New website/
 │  ├─ prefunding.css   # Pre-funding-page-only sections (loaded after style.css)
 │  ├─ education.css    # Education-page-only sections (loaded after style.css)
 │  ├─ faq.css          # FAQ-page-only sections (loaded after style.css)
-│  └─ contact.css      # Contact-page-only sections (loaded after style.css)
+│  ├─ contact.css      # Contact-page-only sections (loaded after style.css)
+│  └─ blog.css         # Blog index + all post pages (loaded after style.css)
 ├─ js/
 │  ├─ layout.js        # GLOBAL: injects header + footer, header scroll behavior
 │  ├─ home.js          # Home-only: offerings tabs + testimonials carousel
 │  ├─ prefunding.js    # Pre-funding-only: tabs + case-work slider
 │  ├─ education.js     # Education-only: past-cohorts slider
-│  └─ faq.js           # FAQ-only: accordion toggle
+│  ├─ faq.js           # FAQ-only: accordion toggle
+│  └─ blog-index.js    # blog.html-only: featured slider + search/author filter
 └─ Assets/
    ├─ Logo/            # Prologue_Logo1 (colored wordmark), Prologue_Logo2 (lockup)
-   ├─ genral/          # footer logo.png (white), footer video.mp4
-   └─ home page/       # section photos, sudhir.png, nitya.png, traphy imag.png
+   ├─ General/         # footer logo.png (white), footer video.mp4
+   ├─ HomePage/        # section photos, sudhir.png, nitya.png, traphy imag.png
+   ├─ PreFunding/      # pricing/offer icons, case-work slider images
+   ├─ About/           # About-page hero, affiliations, "trusted by" logos
+   ├─ Education/       # Education-page cards, past-cohort photos
+   └─ blog/            # Cover images, scene graphics and author photos for blog posts
 ```
+
+Folder names under `Assets/` are PascalCase with no spaces (e.g. `HomePage`, not
+`home page`) so paths never need URL-encoding and never break a `grep`. Keep new
+asset folders consistent with this — don't reintroduce spaces or lowercase
+typos like the old `genral`.
 
 ---
 
@@ -70,6 +84,24 @@ Rules:
   break them — ask before introducing them.
 - Reuse existing classes from `style.css` before inventing new ones. Add new
   component styles to `style.css`, not inline `<style>` blocks.
+
+### Blog posts
+
+**Adding a post? Read [`BLOG-GUIDE.md`](BLOG-GUIDE.md) first — follow it
+exactly, in order.** It's the full, self-contained checklist: the post's
+required head/body boilerplate, every content component available
+(TL;DR box, tables, key-terms, napkin box, etc.), and — critically — the four
+files that must be edited for a new post to actually appear anywhere
+(`vercel.json`, `sitemap.xml`, `blog.html`, `js/post-sidebar.js`). A post
+that only has Step 1 done (the file itself written) is not finished: it
+won't be linked from the index, won't be in the sitemap, and won't appear in
+any other post's "Most Recent"/"Read Next" sidebar.
+
+The short version, for context: every post is a flat file in the root named
+`blog-<slug>.html` (never a subfolder — that's been tried and reverted
+because it breaks root-relative paths), the pretty `/blog/<slug>` URL only
+works via a Vercel rewrite (not locally), and the "Most Recent"/"Read Next"
+sidebar on every post is driven by one shared array in `js/post-sidebar.js`.
 
 ---
 
