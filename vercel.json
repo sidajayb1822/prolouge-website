@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/blog/fundraise-fundamentals",
-      "destination": "/blog/sakshay-upadhyay/fundraise-fundamentals"
+      "destination": "/blog-fundraise-fundamentals"
     },
     {
       "source": "/blog/startup-pitch-deck-examples",

@@ -16,7 +16,7 @@
     <div class="nav">
       <div class="logo-block">
         <a href="index.html">
-          <img src="Assets/genral/Prologue by ESV logo.png" alt="Prologue by Earlyseed Ventures" class="header-logo">
+          <img src="Assets/General/Prologue by ESV logo.png" alt="Prologue by Earlyseed Ventures" class="header-logo">
         </a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -58,10 +58,10 @@
 
   <div class="foot-bottom">
     <video autoplay muted loop playsinline>
-      <source src="Assets/genral/footer video.mp4" type="video/mp4">
+      <source src="Assets/General/footer video.mp4" type="video/mp4">
     </video>
     <div class="inner wrap">
-      <img class="big-logo" src="Assets/genral/footer logo.png" alt="Prologue by Earlyseed Ventures">
+      <img class="big-logo" src="Assets/General/footer logo.png" alt="Prologue by Earlyseed Ventures">
       <div class="divider"></div>
       <p class="meta">An initiative of Earlyseed Ventures</p>
       <p class="meta">&copy; 2026 Prologue. All rights reserved.</p>

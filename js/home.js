@@ -19,13 +19,13 @@
       name: "Sudhir Mehta",
       role: "Founder, YahaWater Pvt. Ltd.",
       quote: "Developing a compelling pitch deck can be one of the hardest parts of being an entrepreneur. Crafting and sequencing its components so it tells an effective story can build a relationship with an investor right at the beginning. ESV not only made a great deck but stuck to our brand guidelines to maintain the ethos of Yahawater.",
-      img: "Assets/home page/sudhir .png"
+      img: "Assets/HomePage/sudhir .png"
     },
     {
       name: "Nitya Saxena",
       role: "Founder, Revoir",
       quote: "It was amazing working with the team. Very detailed oriented and thorough with their work. Extremely knowledgeable and kind. I really appreciate the guidance. Would highly recommend.",
-      img: "Assets/home page/nitya.png"
+      img: "Assets/HomePage/nitya.png"
     }
   ];
   const testi = document.querySelector('.testi');
