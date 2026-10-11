@@ -49,37 +49,119 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- Featured: the 3 most recent posts, one slide at a time -->
+<section class="blog-featured" aria-label="Recent posts">
+  <div class="wrap">
+    <div class="feat-slider">
+      <button class="feat-arrow prev" id="featPrev" aria-label="Previous post">&lsaquo;</button>
+
+      <div class="feat-track">
+        <a class="feat-slide is-active" href="/blog/fundraise-fundamentals">
+          <div class="feat-media"><img src="Assets/blog/post-01-scene-1-house-100-shares.png" alt="A house drawn as a grid of 100 shares, split between four friends" loading="lazy"></div>
+          <div class="feat-txt">
+            <div class="feat-tags"><span class="feat-tag">Fundraising</span><span class="feat-tag">Cap Table</span></div>
+            <h2>Fundraise Fundamentals: Four Friends</h2>
+            <p>Part 1 of Finance for the Fundraising-Curious. Four friends buy a house. One example explains shares, face value, share premium, dilution, and which round you are actually raising.</p>
+            <div class="feat-byline">
+              <img class="avatar" src="Assets/blog/sakshay-upadhyay-author.jpg" alt="Sakshay Upadhyay" width="48" height="48">
+              <div><strong>Sakshay Upadhyay</strong><span>Investment Associate at Earlyseed Ventures · 10 min read</span></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="feat-slide" href="/blog/how-to-value-pre-revenue-startup-india">
+          <div class="feat-media"><img src="Assets/blog/valuation-cover.jpg" alt="How to value a pre-revenue startup in India: a CA's guide" loading="lazy"></div>
+          <div class="feat-txt">
+            <div class="feat-tags"><span class="feat-tag">Valuation</span><span class="feat-tag">Pre-Revenue</span></div>
+            <h2>How to Value a Pre-Revenue Startup in India</h2>
+            <p>The five methods investors use, what actually moves the number, and why you still need a valuation report after angel tax.</p>
+            <div class="feat-byline">
+              <img class="avatar" src="Assets/blog/monica-gupta-author.jpg" alt="Monica Gupta" width="48" height="48">
+              <div><strong>Monica Gupta</strong><span>Co-Founder and CEO, Earlyseed Ventures · 9 min read</span></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="feat-slide" href="/blog/startup-pitch-deck-examples">
+          <div class="feat-media"><img src="Assets/blog/kalaneca-story-slide.jpg" alt="Kalaneca's Story slide from a startup pitch deck built by Prologue" loading="lazy"></div>
+          <div class="feat-txt">
+            <div class="feat-tags"><span class="feat-tag">Pitch Decks</span><span class="feat-tag">Investor-Ready</span></div>
+            <h2>What a Startup Pitch Deck Should Look Like</h2>
+            <p>Most pitch decks don't fail because the business is weak. They fail because the story is missing.</p>
+            <div class="feat-byline">
+              <img class="avatar" src="Assets/blog/monica-gupta-author.jpg" alt="Monica Gupta" width="48" height="48">
+              <div><strong>Monica Gupta</strong><span>Co-Founder and CEO, Earlyseed Ventures · 5 min read</span></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <button class="feat-arrow next" id="featNext" aria-label="Next post">&rsaquo;</button>
+    </div>
+    <div class="feat-dashes" id="featDashes"></div>
+  </div>
+</section>
+
+<!-- Search + author filter -->
+<section class="blog-filter">
+  <div class="wrap">
+    <div class="filter-bar">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="search" id="blogSearch" placeholder="Search posts…" aria-label="Search posts">
+      </div>
+      <div class="author-pills" id="authorPills"></div>
+    </div>
+  </div>
+</section>
+
 <section class="blog-list">
   <div class="wrap">
-    <a class="post-card" href="/blog/fundraise-fundamentals">
-      <img src="Assets/blog/post-01-scene-1-house-100-shares.png" alt="A house drawn as a grid of 100 shares, split between four friends" loading="lazy">
-      <div class="txt">
-        <h2>Fundraise Fundamentals: Four Friends</h2>
-        <p>Part 1 of Finance for the Fundraising-Curious. Four friends buy a house. One example explains shares, face value, share premium, dilution, and which round you are actually raising. By Sakshay Upadhyay.</p>
-        <span class="more">Read the post →</span>
-      </div>
-    </a>
-    <a class="post-card" href="/blog/how-to-value-pre-revenue-startup-india">
-      <img src="Assets/blog/valuation-cover.jpg" alt="How to value a pre-revenue startup in India: a CA's guide" loading="lazy">
-      <div class="txt">
-        <h2>How to Value a Pre-Revenue Startup in India</h2>
-        <p>The five methods investors use, what actually moves the number, and why you still need a valuation report after angel tax. By Monica Gupta.</p>
-        <span class="more">Read the post →</span>
-      </div>
-    </a>
-    <a class="post-card" href="/blog/startup-pitch-deck-examples">
-      <img src="Assets/blog/kalaneca-story-slide.jpg" alt="Kalaneca's Story slide from a startup pitch deck built by Prologue" loading="lazy">
-      <div class="txt">
-        <h2>What a Startup Pitch Deck Should Look Like: Real Examples and What Investors Look For</h2>
-        <p>Most pitch decks don't fail because the business is weak. They fail because the story is missing. By Monica Gupta.</p>
-        <span class="more">Read the post →</span>
-      </div>
-    </a>
+    <div class="post-grid" id="blogGrid">
+      <a class="post-card" href="/blog/fundraise-fundamentals" data-author="Sakshay Upadhyay" data-title="Fundraise Fundamentals: Four Friends" data-excerpt="Part 1 of Finance for the Fundraising-Curious. Four friends buy a house. One example explains shares, face value, share premium, dilution, and which round you are actually raising.">
+        <img src="Assets/blog/post-01-scene-1-house-100-shares.png" alt="A house drawn as a grid of 100 shares, split between four friends" loading="lazy">
+        <div class="txt">
+          <h2>Fundraise Fundamentals: Four Friends</h2>
+          <p>Part 1 of Finance for the Fundraising-Curious. Four friends buy a house. One example explains shares, face value, share premium, dilution, and which round you are actually raising.</p>
+          <div class="card-meta">
+            <img class="avatar" src="Assets/blog/sakshay-upadhyay-author.jpg" alt="" width="28" height="28">
+            <span>Sakshay Upadhyay · 10 min read</span>
+          </div>
+          <span class="more">Read the post →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/blog/how-to-value-pre-revenue-startup-india" data-author="Monica Gupta" data-title="How to Value a Pre-Revenue Startup in India" data-excerpt="The five methods investors use, what actually moves the number, and why you still need a valuation report after angel tax.">
+        <img src="Assets/blog/valuation-cover.jpg" alt="How to value a pre-revenue startup in India: a CA's guide" loading="lazy">
+        <div class="txt">
+          <h2>How to Value a Pre-Revenue Startup in India</h2>
+          <p>The five methods investors use, what actually moves the number, and why you still need a valuation report after angel tax.</p>
+          <div class="card-meta">
+            <img class="avatar" src="Assets/blog/monica-gupta-author.jpg" alt="" width="28" height="28">
+            <span>Monica Gupta · 9 min read</span>
+          </div>
+          <span class="more">Read the post →</span>
+        </div>
+      </a>
+      <a class="post-card" href="/blog/startup-pitch-deck-examples" data-author="Monica Gupta" data-title="What a Startup Pitch Deck Should Look Like: Real Examples and What Investors Look For" data-excerpt="Most pitch decks don't fail because the business is weak. They fail because the story is missing.">
+        <img src="Assets/blog/kalaneca-story-slide.jpg" alt="Kalaneca's Story slide from a startup pitch deck built by Prologue" loading="lazy">
+        <div class="txt">
+          <h2>What a Startup Pitch Deck Should Look Like: Real Examples and What Investors Look For</h2>
+          <p>Most pitch decks don't fail because the business is weak. They fail because the story is missing.</p>
+          <div class="card-meta">
+            <img class="avatar" src="Assets/blog/monica-gupta-author.jpg" alt="" width="28" height="28">
+            <span>Monica Gupta · 5 min read</span>
+          </div>
+          <span class="more">Read the post →</span>
+        </div>
+      </a>
+    </div>
+    <p class="no-results" id="noResults" hidden>No posts match your search.</p>
   </div>
 </section>
 
 <div id="site-footer"></div>
 
 <script src="js/layout.js"></script>
+<script src="js/blog-index.js"></script>
 </body>
 </html>

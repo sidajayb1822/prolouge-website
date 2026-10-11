@@ -43,13 +43,63 @@
 
 /* Blog index */
 .blog-list{padding:30px 0 70px;}
-.post-card{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(27,35,64,.06);transition:transform .15s ease;}
-.post-card:hover{transform:translateY(-3px);}
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.post-card{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(27,35,64,.06);transition:transform .15s ease,box-shadow .15s ease;}
+.post-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(27,35,64,.1);}
 .post-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
 .post-card .txt{padding:24px 28px 28px;}
-.post-card h2{font-size:24px;color:var(--blue);margin-bottom:10px;}
+.post-card h2{font-size:22px;color:var(--blue);margin-bottom:10px;}
 .post-card p{color:var(--muted);font-size:15px;line-height:1.7;}
+.post-card .card-meta{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13px;color:var(--muted);}
+.post-card .card-meta .avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;}
 .post-card .more{display:inline-block;margin-top:14px;color:var(--orange);font-weight:600;font-size:15px;}
+.no-results{text-align:center;color:var(--muted);font-size:16px;padding:40px 0;}
+
+/* Featured slider: the 3 most recent posts */
+.blog-featured{padding:10px 0 20px;}
+.blog-featured .wrap{max-width:1180px;}
+.feat-slider{display:flex;align-items:center;gap:20px;}
+.feat-track{flex:1;position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 14px 34px rgba(27,35,64,.08);overflow:hidden;}
+.feat-slide{display:none;grid-template-columns:1fr 1fr;align-items:stretch;text-decoration:none;color:inherit;}
+.feat-slide.is-active{display:grid;}
+.feat-media{min-height:280px;}
+.feat-media img{width:100%;height:100%;object-fit:cover;display:block;}
+.feat-txt{padding:40px 44px;display:flex;flex-direction:column;justify-content:center;}
+.feat-tags{display:flex;gap:10px;margin-bottom:16px;}
+.feat-tag{display:inline-block;padding:6px 16px;border-radius:999px;border:1px solid var(--teal);color:var(--teal);font-size:13px;font-weight:600;}
+.feat-txt h2{font-size:30px;color:var(--blue);line-height:1.2;margin-bottom:14px;}
+.feat-txt p{color:var(--muted);font-size:15.5px;line-height:1.7;}
+.feat-byline{margin-top:24px;display:flex;align-items:center;gap:12px;}
+.feat-byline .avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+.feat-byline strong{display:block;color:var(--ink);font-size:14.5px;font-weight:600;}
+.feat-byline span{color:var(--muted);font-size:13px;}
+.feat-arrow{width:56px;height:56px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0;cursor:pointer;border:none;padding:0;box-shadow:0 10px 24px rgba(63,183,194,.35);line-height:1;}
+.feat-arrow:hover{background:#2E9CA6;}
+.feat-dashes{display:flex;justify-content:center;gap:8px;margin-top:22px;}
+.feat-dash{width:34px;height:4px;border-radius:2px;border:none;padding:0;background:var(--line);cursor:pointer;}
+.feat-dash.is-active{background:var(--orange);}
+
+/* Search + author filter */
+.blog-filter{padding:0 0 10px;}
+.filter-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:22px;}
+.search-box{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 20px;flex:0 1 320px;color:var(--muted);}
+.search-box svg{flex-shrink:0;}
+.search-box input{border:none;outline:none;background:none;font:inherit;font-size:15px;color:var(--ink);width:100%;}
+.author-pills{display:flex;gap:10px;flex-wrap:wrap;}
+.author-pills button{border:1px solid var(--line);background:#fff;color:var(--muted);padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s ease;}
+.author-pills button:hover{border-color:var(--teal);color:var(--teal);}
+.author-pills button.is-active{background:var(--blue);border-color:var(--blue);color:#fff;}
+
+@media(max-width:860px){
+  .post-grid{grid-template-columns:1fr;}
+  .feat-slide.is-active{display:flex;flex-direction:column;}
+  .feat-media{min-height:200px;}
+  .feat-txt{padding:28px 24px;}
+  .feat-txt h2{font-size:24px;}
+  .feat-arrow{width:44px;height:44px;font-size:22px;}
+  .filter-bar{flex-direction:column;align-items:stretch;}
+  .search-box{flex:1 1 auto;}
+}
 
 @media(max-width:600px){
   .post-hero h1{font-size:32px;}
