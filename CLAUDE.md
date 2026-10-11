@@ -21,6 +21,8 @@ Prologue New website/
 ├─ blog.html            # Blog index: featured slider + search + author filter + grid
 ├─ blog-<slug>.html     # One file per blog post, flat in the root (see "Blog posts" below)
 ├─ vercel.json           # Clean URLs + the /blog/<slug> rewrites (see "Blog posts" below)
+├─ favicon.ico, favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png
+│                        # Generated from the teal "o" in Assets/Logo — see Favicon below
 ├─ CLAUDE.md           # This file
 ├─ css/
 │  ├─ style.css        # ALL shared styling (design tokens + components)
@@ -84,6 +86,17 @@ Rules:
   break them — ask before introducing them.
 - Reuse existing classes from `style.css` before inventing new ones. Add new
   component styles to `style.css`, not inline `<style>` blocks.
+
+### Favicon
+
+`page-template.html` already has the four favicon `<link>` tags right after
+the viewport meta tag, so copying it (as above) covers this automatically —
+nothing to add by hand. The icon itself is the teal "o" dot cropped out of
+`Assets/Logo/Prologue_Logo1 (1).png` (the first "o" in the wordmark), not a
+separate piece of brand art. If the logo is ever redrawn, regenerate
+`favicon.ico` / `favicon-16x16.png` / `favicon-32x32.png` /
+`apple-touch-icon.png` from the new file the same way — crop that "o" glyph
+tight (no neighboring letters bleeding in), then downscale with Pillow/`LANCZOS`.
 
 ### Blog posts
 
