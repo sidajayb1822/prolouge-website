@@ -170,7 +170,17 @@
   .post-body h2{font-size:24px;margin-top:38px;}
   .post-cta{padding:26px 22px;}
   .author-box{flex-direction:column;text-align:center;}
+  /* Featured slider: arrows sat beside the slide and left it ~210px wide on a phone.
+     Overlay them on the slide's image instead so the slide gets the full width. */
+  .feat-slider{position:relative;gap:0;}
+  .feat-arrow{position:absolute;top:110px;transform:translateY(-50%);z-index:2;width:40px;height:40px;font-size:20px;}
+  .feat-arrow.prev{left:10px;}
+  .feat-arrow.next{right:10px;}
+  .feat-tags{flex-wrap:wrap;gap:8px;}
+  .feat-tag{white-space:nowrap;}
 }
+.feat-tag{white-space:nowrap;}
+.feat-txt p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
 
 /* Sub-headings and small print inside posts */
 .post-body h3{font-size:21px;color:var(--ink);margin:32px 0 12px;}
