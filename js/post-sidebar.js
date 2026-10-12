@@ -4,7 +4,7 @@
 
 (function () {
   var POSTS = [
-    { slug: 'same-money-different-paper', title: 'Same Money, Different Paper: Esha's Options', image: 'Assets/blog/post-02-scene-1-same-money-different-paper.png', author: 'Sakshay Upadhyay', avatar: 'Assets/blog/sakshay-upadhyay-author.jpg', readTime: '12 min read' },
+    { slug: 'same-money-different-paper', title: "Same Money, Different Paper: Esha's Options", image: 'Assets/blog/post-02-scene-1-same-money-different-paper.png', author: 'Sakshay Upadhyay', avatar: 'Assets/blog/sakshay-upadhyay-author.jpg', readTime: '12 min read' },
     { slug: 'fundraise-fundamentals', title: 'Fundraise Fundamentals: Four Friends', image: 'Assets/blog/post-01-scene-1-house-100-shares.png', author: 'Sakshay Upadhyay', avatar: 'Assets/blog/sakshay-upadhyay-author.jpg', readTime: '10 min read' },
     { slug: 'how-to-value-pre-revenue-startup-india', title: 'How to Value a Pre-Revenue Startup in India', image: 'Assets/blog/valuation-cover.jpg', author: 'Monica Gupta', avatar: 'Assets/blog/monica-gupta-author.jpg', readTime: '9 min read' },
     { slug: 'startup-pitch-deck-examples', title: 'What a Startup Pitch Deck Should Look Like', image: 'Assets/blog/kalaneca-story-slide.jpg', author: 'Monica Gupta', avatar: 'Assets/blog/monica-gupta-author.jpg', readTime: '5 min read' }
