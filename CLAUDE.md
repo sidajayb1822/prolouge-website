@@ -38,7 +38,8 @@ Prologue New website/
 │  ├─ prefunding.js    # Pre-funding-only: tabs + case-work slider
 │  ├─ education.js     # Education-only: past-cohorts slider
 │  ├─ faq.js           # FAQ-only: accordion toggle
-│  └─ blog-index.js    # blog.html-only: featured slider + search/author filter
+│  ├─ blog-index.js    # blog.html-only: featured slider + search/author filter
+│  └─ post-audio.js    # Blog posts: "Listen to this article" (browser text-to-speech)
 └─ Assets/
    ├─ Logo/            # Prologue_Logo1 (colored wordmark), Prologue_Logo2 (lockup)
    ├─ General/         # footer logo.png (white), footer video.mp4

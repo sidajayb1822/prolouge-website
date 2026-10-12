@@ -227,6 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="js/layout.js"></script>
 <script src="js/post-sidebar.js"></script>
+<script src="js/post-audio.js"></script>
 </body>
 </html>
 ```
@@ -415,6 +416,9 @@ but pointless) and no other post will ever link to it.
       Easy to assume a flat-root file doesn't need it; it does, because of the
       post's 2-segment clean URL, not its location on disk.
 - [ ] No leftover `.verify` badges.
+- [ ] Pressed **Listen** under the byline and heard the post start with its
+      title. The player is built by `js/post-audio.js` — no per-post setup
+      beyond the `<script>` tag in the template above.
 - [ ] Opened the real filename locally (`blog-<slug>.html`) and confirmed:
       images load, the sidebar shows the right "Most Recent"/"Read Next"
       posts, and the browser console has no errors.
@@ -436,6 +440,10 @@ but pointless) and no other post will ever link to it.
 - `js/post-sidebar.js` — the only data source for every post's "Most
   Recent"/"Read Next" sidebar. Edit this file's `POSTS` array (Step 2d) for
   every new post.
+- `js/post-audio.js` — the "Listen to this article" player on every post.
+  Reads the post aloud with the browser's built-in voice, skipping tables,
+  the CTA, the author box and the sidebar. Builds itself under the byline;
+  you don't edit this file to add a post, just include its `<script>` tag.
 - `css/blog.css` — all styling for `blog.html` and every post page, loaded
   after `css/style.css`. Reuse the classes in the Content Components table
   above before inventing new ones.
