@@ -3,6 +3,10 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/blog/india-defence-importer-to-builder",
+      "destination": "/blog-india-defence-importer-to-builder"
+    },
+    {
       "source": "/blog/same-money-different-paper",
       "destination": "/blog-same-money-different-paper"
     },

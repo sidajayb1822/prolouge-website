@@ -5,6 +5,7 @@
 
 (function () {
   var POSTS = [
+    { slug: 'india-defence-importer-to-builder', title: "From Biggest Importer to Builder", image: 'Assets/blog/india-defence-importer-to-builder-cover.jpg', author: 'Karan Shah', avatar: 'Assets/blog/karan-shah-author.jpg', readTime: '5 min read', excerpt: "India is still the second largest arms importer, yet defence production hit a record Rs 1.78 lakh crore in FY26. Here is what changed." },
     { slug: 'same-money-different-paper', title: "Same Money, Different Paper: Esha's Options", image: 'Assets/blog/post-02-scene-1-same-money-different-paper.png', author: 'Sakshay Upadhyay', avatar: 'Assets/blog/sakshay-upadhyay-author.jpg', readTime: '12 min read', excerpt: 'The same cheque can buy very different things. Equity, CCPS, CCDs, NCDs and iSAFE, explained with a house.' },
     { slug: 'fundraise-fundamentals', title: 'Fundraise Fundamentals: Four Friends', image: 'Assets/blog/post-01-scene-1-house-100-shares.png', author: 'Sakshay Upadhyay', avatar: 'Assets/blog/sakshay-upadhyay-author.jpg', readTime: '10 min read', excerpt: 'Four friends buy a house. One example explains shares, face value, share premium, and dilution.' },
     { slug: 'how-to-value-pre-revenue-startup-india', title: 'How to Value a Pre-Revenue Startup in India', image: 'Assets/blog/valuation-cover.jpg', author: 'Monica Gupta', avatar: 'Assets/blog/monica-gupta-author.jpg', readTime: '9 min read', excerpt: 'The five methods investors use, what actually moves the number, and why you still need a valuation report after angel tax.' },
