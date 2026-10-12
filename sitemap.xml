@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://www.prologue.co.in/blog</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -56,7 +56,13 @@
   </url>
   <url>
     <loc>https://www.prologue.co.in/blog/fundraise-fundamentals</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.prologue.co.in/blog/same-money-different-paper</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

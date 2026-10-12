@@ -3,6 +3,10 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/blog/same-money-different-paper",
+      "destination": "/blog-same-money-different-paper"
+    },
+    {
       "source": "/blog/fundraise-fundamentals",
       "destination": "/blog-fundraise-fundamentals"
     },
