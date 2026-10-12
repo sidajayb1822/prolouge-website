@@ -376,14 +376,21 @@ reflow the page when the carousel rotates; longer text just clips.
 Add one entry to the **top** of the `POSTS` array (newest first):
 
 ```js
-{ slug: 'YOUR-SLUG', title: 'YOUR TITLE', image: 'Assets/blog/YOUR-COVER-IMAGE', author: 'AUTHOR NAME', avatar: 'Assets/blog/AUTHOR-PHOTO', readTime: 'N min read' },
+{ slug: 'YOUR-SLUG', title: 'YOUR TITLE', image: 'Assets/blog/YOUR-COVER-IMAGE', author: 'AUTHOR NAME', avatar: 'Assets/blog/AUTHOR-PHOTO', readTime: 'N min read', excerpt: 'ONE OR TWO SHORT SENTENCES' },
 ```
+
+If the title or excerpt contains an apostrophe, wrap that value in double
+quotes (`"Esha's Options"`). A bare `'` inside single quotes ends the string,
+the whole file fails to parse, and every post's sidebar goes blank.
 
 This is the **only** place this data lives. Adding it here is what makes:
 - your new post's own sidebar populate ("Most Recent" = whatever's now #1
   excluding itself, "Read Next" = the rest), and
 - every *existing* post's sidebar automatically start including your new
   post, with no edits to those other files.
+- hovering a link to your post from any other post's body show a small
+  preview card (cover, title, `excerpt`, author). Reuse the short excerpt
+  from the post's `blog.html` slide or card.
 
 If you forget this step, your new post's sidebar renders empty (harmless,
 but pointless) and no other post will ever link to it.

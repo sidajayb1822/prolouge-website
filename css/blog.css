@@ -67,6 +67,18 @@
 .sidebar-next-item:hover img,.sidebar-next-item:focus-visible img{transform:scale(1.04);}
 .sidebar-featured:hover h3,.sidebar-featured:focus-visible h3,.sidebar-next-item:hover h4,.sidebar-next-item:focus-visible h4{color:var(--teal);text-decoration:underline;text-underline-offset:3px;}
 
+/* Hover preview for links to other posts (built by js/post-sidebar.js, appended to <body>) */
+.link-preview{position:fixed;top:0;left:0;z-index:300;display:block;width:300px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 40px rgba(27,35,64,.16);overflow:hidden;color:inherit;text-decoration:none;opacity:0;visibility:hidden;transform:translateY(4px);pointer-events:none;transition:opacity .15s ease, transform .15s ease, visibility 0s linear .15s;}
+.link-preview.is-open{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition:opacity .15s ease, transform .15s ease, visibility 0s;}
+.link-preview>img{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--line);}
+.link-preview .lp-body{padding:12px 14px 14px;}
+.link-preview .lp-kicker{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin:0 0 4px;}
+.link-preview .lp-title{font-size:15px;font-weight:700;color:var(--blue);line-height:1.35;margin:0 0 6px;}
+.link-preview .lp-excerpt{font-size:13px;line-height:1.55;color:var(--muted);margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.link-preview .lp-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
+.link-preview .lp-meta img{width:22px;height:22px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+@media (prefers-reduced-motion: reduce){.link-preview,.link-preview.is-open{transition:none;transform:none;}}
+
 @media(max-width:960px){
   .post-layout{grid-template-columns:1fr;gap:40px;}
   .post-sidebar{position:static;max-height:none;overflow:visible;padding:0;margin:0;}
