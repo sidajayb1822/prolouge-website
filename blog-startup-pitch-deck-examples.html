@@ -19,6 +19,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Required: this page is served at the 2-segment clean URL /blog/startup-pitch-deck-examples
+     (see vercel.json). Without this, every relative path below (css/, js/, Assets/,
+     favicon.*) resolves against /blog/ instead of site root and 404s in production.
+     Harmless for local preview via a static server; only breaks a raw file:// double-click. -->
+<base href="/">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">

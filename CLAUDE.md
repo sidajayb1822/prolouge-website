@@ -116,6 +116,15 @@ because it breaks root-relative paths), the pretty `/blog/<slug>` URL only
 works via a Vercel rewrite (not locally), and the "Most Recent"/"Read Next"
 sidebar on every post is driven by one shared array in `js/post-sidebar.js`.
 
+**Every post's `<head>` needs `<base href="/">`.** This broke the live site
+once already (CSS silently failed to load on every post page in production)
+when a session assumed it was only needed for the old nested-subfolder
+location and removed it. It's actually needed for an unrelated reason that
+doesn't go away when the file is flat: the clean URL `/blog/<slug>` is two
+path segments deep, so an unqualified relative path like `href="css/style.css"`
+resolves against `/blog/` and 404s. `blog.html` itself doesn't need this —
+its URL, `/blog`, is only one segment. See BLOG-GUIDE.md Step 1a.
+
 ---
 
 ## Design tokens (CSS variables in `css/style.css` `:root`)

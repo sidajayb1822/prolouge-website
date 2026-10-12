@@ -58,10 +58,25 @@ data) — compute it once and reuse it everywhere so they agree.
 ## 1. Write the post file
 
 Create `blog-<slug>.html` **in the project root** — never in a subfolder.
-This has been tried before and reverted: a nested post needs a `<base href>`
-hack to make its `Assets/…`, `css/…` and `js/…` paths resolve, which breaks
-viewing the file directly (`file://`) and is one more thing to get wrong.
-Flat files need no such hack.
+This has been tried before and reverted: putting the *file* in a subfolder
+needs its own `<base href>` hack to make its relative `Assets/…`, `css/…`
+and `js/…` paths resolve, which breaks viewing the file directly (`file://`)
+and is one more thing to get wrong. Flat files avoid that specific problem.
+
+**But every post still needs its own `<base href="/">`, for a different,
+unavoidable reason: the pretty URL it's served at.** Every post's clean URL
+is two path segments deep (`/blog/<slug>`, from the `vercel.json` rewrite in
+Step 2a), and a relative path resolves against the *browser's address bar*,
+not against where the file sits on disk. At `/blog/<slug>`, `href="css/style.css"`
+resolves to the nonexistent `/blog/css/style.css` — a 404 — instead of
+`/css/style.css`. `<base href="/">` forces every relative path on the page
+back to resolving from the site root regardless of URL depth, which fixes
+it. (`blog.html` itself doesn't need this — its clean URL, `/blog`, is only
+one segment deep, so relative paths already resolve correctly from root.)
+This was broken in production once already by a session that assumed the
+`<base href>` was *only* about file location and removed it — don't repeat
+that; include it in every post's head (see the template below) even though
+local preview works fine without it.
 
 Copy an existing post as your starting point — `blog-fundraise-fundamentals.html`
 is the most complete reference — rather than `page-template.html`, which
@@ -91,6 +106,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Required: this page is served at the 2-segment clean URL /blog/YOUR-SLUG
+     (see vercel.json). Without this, every relative path below (css/, js/, Assets/,
+     favicon.*) resolves against /blog/ instead of site root and 404s in production.
+     Harmless for local preview via a static server; only breaks a raw file:// double-click. -->
+<base href="/">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <title>YOUR TITLE | Prologue</title>
 <meta name="description" content="YOUR META DESCRIPTION">
 <link rel="canonical" href="https://www.prologue.co.in/blog/YOUR-SLUG">
@@ -380,8 +404,9 @@ but pointless) and no other post will ever link to it.
       copy).
 - [ ] `data-author` on the grid card matches the post's byline name exactly
       (case and spacing).
-- [ ] No leftover `<base href>` tag — this post is flat at root, it doesn't
-      need one.
+- [ ] `<base href="/">` **is present** in the head (not missing — see Step 1a).
+      Easy to assume a flat-root file doesn't need it; it does, because of the
+      post's 2-segment clean URL, not its location on disk.
 - [ ] No leftover `.verify` badges.
 - [ ] Opened the real filename locally (`blog-<slug>.html`) and confirmed:
       images load, the sidebar shows the right "Most Recent"/"Read Next"
