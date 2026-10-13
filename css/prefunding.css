@@ -22,6 +22,10 @@
 .feature img{width:36px;height:36px;object-fit:contain;flex-shrink:0;}
 .feature span{font-size:14px;font-weight:600;}
 .feature.off{opacity:.4;}
+.feature span small{display:block;font-size:9px;font-weight:500;line-height:1.4;opacity:.8;margin-top:1px;}
+.feature[hidden]{display:none;}
+.feature-more{display:inline-flex;align-items:center;margin-top:6px;padding:7px 16px;border:1.5px solid rgba(255,255,255,.7);border-radius:999px;background:transparent;color:#fff;font:600 13px 'Poppins',sans-serif;cursor:pointer;transition:background .2s;}
+.feature-more:hover{background:rgba(255,255,255,.15);}
 
 /* Add-on services */
 .addon-lead{margin:38px 0 14px;}
