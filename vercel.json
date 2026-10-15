@@ -3,6 +3,10 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/blog/who-pays-for-the-esop-pool",
+      "destination": "/blog-who-pays-for-the-esop-pool"
+    },
+    {
       "source": "/blog/india-defence-importer-to-builder",
       "destination": "/blog-india-defence-importer-to-builder"
     },

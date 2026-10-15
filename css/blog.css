@@ -528,3 +528,55 @@
   line-height: 1.6;
   color: var(--muted);
 }
+
+/* --- Founder quote ---------------------------------------------------------
+   A pull quote with the speaker's photo, name and role. White card with an
+   orange left rule, so it reads as a voice, not as another note. */
+
+.post-body .founder-quote {
+  margin: 40px 0;
+  padding: 28px 30px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--orange);
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 10px 30px rgba(27, 35, 64, .06);
+}
+.post-body .founder-quote blockquote {
+  margin: 0;
+}
+.post-body .founder-quote blockquote p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+.post-body .founder-quote blockquote p::before { content: "\201C"; }
+.post-body .founder-quote blockquote p::after { content: "\201D"; }
+.post-body .founder-quote figcaption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.post-body .founder-quote figcaption img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  margin: 0;
+}
+.post-body .founder-quote figcaption strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .post-body .founder-quote { padding: 22px 20px; }
+  .post-body .founder-quote blockquote p { font-size: 18px; }
+}
