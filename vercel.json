@@ -15,6 +15,10 @@
   ],
   "rewrites": [
     {
+      "source": "/blog/right-investors-for-your-startup",
+      "destination": "/blog-right-investors-for-your-startup"
+    },
+    {
       "source": "/blog/esop-essentials",
       "destination": "/blog-esop-essentials"
     },

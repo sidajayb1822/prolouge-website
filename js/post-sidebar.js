@@ -5,6 +5,7 @@
 
 (function () {
   var POSTS = [
+    { slug: 'right-investors-for-your-startup', title: 'The Right Money: Who Invests Matters', image: 'Assets/blog/right-investors-for-your-startup-cover.jpg', author: 'Monica Gupta', avatar: 'Assets/blog/monica-gupta-author.jpg', readTime: '9 min read', excerpt: "Patient capital, sector-fit investors and the term sheet clauses every founder should read twice." },
     { slug: 'esop-essentials', title: 'ESOP Essentials: A Slice for Farhan', image: 'Assets/blog/post-03-scene-1-one-more-line.png', author: 'Sakshay Upadhyay', avatar: 'Assets/blog/sakshay-upadhyay-author.jpg', readTime: '9 min read', excerpt: "What an ESOP pool is, how vesting and the cliff work, and why a pool in the pre-money comes out of the founders' slice." },
     { slug: 'india-defence-importer-to-builder', title: "From Biggest Importer to Builder", image: 'Assets/blog/india-defence-importer-to-builder-cover.jpg', author: 'Karan Shah', avatar: 'Assets/blog/karan-shah-author.jpg', readTime: '5 min read', excerpt: "India is still the second largest arms importer, yet defence production hit a record Rs 1.78 lakh crore in FY26. Here is what changed." },
     { slug: 'same-money-different-paper', title: "Same Money, Different Paper: Esha's Options", image: 'Assets/blog/post-02-scene-1-same-money-different-paper.png', author: 'Sakshay Upadhyay', avatar: 'Assets/blog/sakshay-upadhyay-author.jpg', readTime: '12 min read', excerpt: 'The same cheque can buy very different things. Equity, CCPS, CCDs, NCDs and iSAFE, explained with a house.' },
