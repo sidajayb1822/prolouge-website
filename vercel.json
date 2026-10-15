@@ -1,10 +1,22 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/blog/who-pays-for-the-esop-pool",
-      "destination": "/blog-who-pays-for-the-esop-pool"
+      "destination": "/blog/esop-essentials",
+      "permanent": true
+    },
+    {
+      "source": "/blog-who-pays-for-the-esop-pool",
+      "destination": "/blog/esop-essentials",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog/esop-essentials",
+      "destination": "/blog-esop-essentials"
     },
     {
       "source": "/blog/india-defence-importer-to-builder",
