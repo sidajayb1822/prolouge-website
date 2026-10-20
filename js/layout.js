@@ -70,6 +70,7 @@
         <a href="#">Terms and Conditions</a>
       </div>
     </div>
+    <p class="built-by">Built with <a href="https://www.hereafter.co.in/" target="_blank" rel="noopener">Hereafter</a> &amp; <a href="https://arboreallabs.com/websites/prologue" target="_blank" rel="noopener">Arboreal Labs</a></p>
   </div>`;
 
   function inject() {
