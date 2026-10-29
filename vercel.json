@@ -15,6 +15,10 @@
   ],
   "rewrites": [
     {
+      "source": "/blog/someone-else-wants-in",
+      "destination": "/blog-someone-else-wants-in"
+    },
+    {
       "source": "/blog/where-indian-deep-tech-breaks",
       "destination": "/blog-where-indian-deep-tech-breaks"
     },
