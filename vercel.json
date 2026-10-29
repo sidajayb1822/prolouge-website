@@ -15,6 +15,10 @@
   ],
   "rewrites": [
     {
+      "source": "/blog/deep-tech-defined",
+      "destination": "/blog-deep-tech-defined"
+    },
+    {
       "source": "/blog/get-your-fundraise-timing-right",
       "destination": "/blog-get-your-fundraise-timing-right"
     },
