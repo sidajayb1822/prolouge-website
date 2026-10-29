@@ -15,6 +15,10 @@
   ],
   "rewrites": [
     {
+      "source": "/blog/get-your-fundraise-timing-right",
+      "destination": "/blog-get-your-fundraise-timing-right"
+    },
+    {
       "source": "/blog/right-investors-for-your-startup",
       "destination": "/blog-right-investors-for-your-startup"
     },
