@@ -15,6 +15,10 @@
   ],
   "rewrites": [
     {
+      "source": "/blog/where-indian-deep-tech-breaks",
+      "destination": "/blog-where-indian-deep-tech-breaks"
+    },
+    {
       "source": "/blog/deep-tech-defined",
       "destination": "/blog-deep-tech-defined"
     },
